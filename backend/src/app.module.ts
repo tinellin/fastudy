@@ -20,4 +20,5 @@ import { ArticleModule } from './article/article.module';
     ArticleModule,
   ],
 })
-export class AppModule {}
+export class AppModule {
+}

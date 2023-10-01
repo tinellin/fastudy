@@ -20,15 +20,11 @@ import {
 } from '../pages/Main/Modal/LessonModal/LessonSend';
 import { LessonDo, Template } from '../pages/Main/Modal/LessonModal/LessonDo';
 
-import Wording from '../pages/Main/Modal/WordingModal';
-import WordingModalView from '../pages/Main/Modal/WordingModal/WordingModalView';
-
 export const openModal = (type) => {
   let modal;
   if (type === 'MODAL_VIDEO') modal = <VideoModal />;
   else if (type === 'MODAL_ARTICLE') modal = <ArticleModal />;
   else if (type === 'MODAL_LESSON') modal = <LessonModal />;
-  else if (type === 'MODAL_WORDING') modal = <Wording />;
 
   return {
     type: 'MODAL_OPENED',
@@ -74,9 +70,6 @@ export const renderModal = (subType, type, counter, noAdd) => {
       break;
     case 'MODAL_CONFIRMATION':
       config = configs(<ModalConfirmation type={type} />, 24, 33, 24, 33);
-      break;
-    case 'MODAL_WORDING_VIEW':
-      config = configs(<WordingModalView />, 40, 90, 24, 33);
       break;
     case 'MODAL_THANKED':
       config = configs(<ModalThanked />, 20, 26, 20, 26);
